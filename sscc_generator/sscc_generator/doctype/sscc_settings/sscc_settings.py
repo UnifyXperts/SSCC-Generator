@@ -29,7 +29,7 @@ class SSCCSettings(Document):
         """
         Generate next SSCC for this company record and update last_generated_sscc.
         """
-        ai = self.application_identifier or "00"
+        ai = self.application_identifier
         company_prefix = self.gs1_company_prefix
         last_sscc = self.last_generated_sscc
 

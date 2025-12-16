@@ -7,6 +7,7 @@
  "engine": "InnoDB",
  "field_order": [
   "company_name",
+  "application_identifier",
   "gs1_company_prefix",
   "last_generated_sscc"
  ],
@@ -31,11 +32,17 @@
    "options": "Company",
    "reqd": 1,
    "unique": 1
+  },
+  {
+   "fieldname": "application_identifier",
+   "fieldtype": "Data",
+   "label": "Application Identifier",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-12-11 00:48:11.125468",
+ "modified": "2025-12-15 22:33:47.332148",
  "modified_by": "Administrator",
  "module": "SSCC Generator",
  "name": "SSCC Settings",

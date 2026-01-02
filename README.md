@@ -61,8 +61,6 @@ sscc_generator/
 
 The **SSCC Generator** app can be installed on any existing **Frappe / ERPNext** site.
 
----
-
 ### Prerequisites
 
 Before installing, ensure you have:
@@ -87,7 +85,6 @@ From your bench directory, run:
 ```bash
 bench get-app sscc_generator https://github.com/UnifyXperts/ERPNext-SSCC-Generator.git
 ```
----
 
 ### Step 2: Install the App on Your Site
 
@@ -101,8 +98,6 @@ bench --site your-site-name install-app sscc_generator
 bench --site site1.local install-app sscc_generator
 ```
 
----
-
 ### Step 3: Apply Migrations
 
 ```bash
@@ -115,8 +110,6 @@ This will:
 * Register permissions
 * Sync app metadata
 
----
-
 ### Step 4: Restart Bench
 
 ```bash
@@ -124,8 +117,6 @@ bench restart
 ```
 
 *(Required for production or supervisor setups.)*
-
----
 
 ### Step 5: Configure SSCC Settings
 
@@ -153,8 +144,6 @@ Save the record.
   "doctype": "SSCC Settings"
 }
 ```
-
----
 
 ### Step 6: Generate Your First SSCC
 

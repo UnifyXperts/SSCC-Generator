@@ -79,8 +79,8 @@ Each record corresponds to one company and stores its **GS1 Company Prefix**, **
 
 ```json
 {
-  "name": "Makable",
-  "company_name": "Makable",
+  "name": "Company A",
+  "company_name": "Company A",
   "application_identifier": "00",
   "gs1_company_prefix": "0012345",
   "last_generated_sscc": "00000123450000000249",
@@ -185,7 +185,7 @@ bench console
 ```
 
 ```python
-doc = frappe.get_doc("SSCC Settings", "Makable")
+doc = frappe.get_doc("SSCC Settings", "Company A")
 doc.generate_next_sscc()
 ```
 

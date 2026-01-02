@@ -2,7 +2,7 @@
 
 The SSCC Generator app provides a reliable and GS1-compliant way to generate Serial Shipping Container Codes (SSCC) directly within the Frappe Framework or ERPNext.
 
-### 📦 Overview
+### Overview
 
 The **SSCC Generator App** (`sscc_generator`) is a custom Frappe application designed to generate and manage **Serial Shipping Container Codes (SSCC-18)** for multiple companies within the ERP system.
 
@@ -10,7 +10,7 @@ SSCCs uniquely identify logistic units (such as cartons, pallets, or containers)
 
 Each generated SSCC-18 code is stored in the system and incremented automatically for future generations.
 
-## 🧩 Core Concept: SSCC-18 Structure
+## Core Concept: SSCC-18 Structure
  
 Its structure is defined by the **GS1 standard** and consists of the following parts:
 
@@ -23,7 +23,7 @@ Its structure is defined by the **GS1 standard** and consists of the following p
 | **Check Digit**                 | Calculated using the Modulo 10 algorithm.                                          | 9         | 1      |
 | **Total Digits (excluding AI)** | —                                                                                  | —         | 18     |
 
-👉 The complete format looks like:
+The complete format looks like:
 
 ```
 (00) 0 0012345 000000024 9
@@ -37,7 +37,7 @@ Or, concatenated as a **20-character string** (including AI):
 
 ---
 
-## ⚙️ Frappe App Structure
+## Frappe App Structure
 
 ```
 sscc_generator/
@@ -57,7 +57,7 @@ sscc_generator/
 
 ---
 
-## 🧾 Doctype: SSCC Settings
+## Doctype: SSCC Settings
 
 ### Purpose
 
@@ -90,7 +90,7 @@ Each record corresponds to one company and stores its **GS1 Company Prefix**, **
 
 ---
 
-## 🧰 Usage Steps
+## Usage Steps
 
 ### 1. Setup
 
@@ -123,7 +123,7 @@ print(new_sscc)
 
 ---
 
-## 📚 References
+## References
 
 - GS1: [What is an SSCC?](https://www.gs1.org/standards/id-keys/sscc)
     

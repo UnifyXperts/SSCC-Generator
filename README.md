@@ -118,11 +118,8 @@ bench version
 From your bench directory, run:
 
 ```bash
-bench get-app sscc_generator https://github.com/<your-username>/sscc_generator
+bench get-app sscc_generator https://github.com/UnifyXperts/ERPNext-SSCC-Generator.git
 ```
-
-Replace `<your-username>` with the actual GitHub username or organization.
-
 ---
 
 ### Step 2: Install the App on Your Site

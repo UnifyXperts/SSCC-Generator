@@ -188,3 +188,6 @@ doc.generate_next_sscc()
 - GS1: [Check Digit Calculator](https://www.gs1.org/services/check-digit-calculator)
     
 - GS1: [Company Prefix Registration](https://www.gs1.org/company-prefix)
+
+## License
+MIT

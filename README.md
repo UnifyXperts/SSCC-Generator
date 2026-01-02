@@ -1,10 +1,6 @@
-## SSCC Generator
+## ErpNext SSCC Generator
 
 The SSCC Generator app provides a reliable and GS1-compliant way to generate Serial Shipping Container Codes (SSCC) directly within the Frappe Framework or ERPNext.
-
-#### License
-
-mit
 
 ### 📦 Overview
 
@@ -15,8 +11,7 @@ SSCCs uniquely identify logistic units (such as cartons, pallets, or containers)
 Each generated SSCC-18 code is stored in the system and incremented automatically for future generations.
 
 ## 🧩 Core Concept: SSCC-18 Structure
-
-An **SSCC-18** is a **unique 18-digit number** that identifies a single logistic unit.  
+ 
 Its structure is defined by the **GS1 standard** and consists of the following parts:
 
 | Component                       | Description                                                                        | Example   | Length |
@@ -27,8 +22,6 @@ Its structure is defined by the **GS1 standard** and consists of the following p
 | **Serial Reference**            | Unique number within the company prefix to identify a logistic unit.               | 000000024 | 9      |
 | **Check Digit**                 | Calculated using the Modulo 10 algorithm.                                          | 9         | 1      |
 | **Total Digits (excluding AI)** | —                                                                                  | —         | 18     |
-
-![[Pasted image 20251030094636.png]]
 
 👉 The complete format looks like:
 
@@ -105,7 +98,7 @@ Each record corresponds to one company and stores its **GS1 Company Prefix**, **
     
 - Create a record for your company:
     
-    - Enter _Company Name_
+    - Enter _Company Name_ (company_name = "ABC")
         
     - Set _Application Identifier_ (default `00`)
         
@@ -117,7 +110,7 @@ Each record corresponds to one company and stores its **GS1 Company Prefix**, **
 From Frappe console, API, or server script:
 
 ```python
-doc = frappe.get_doc("SSCC Settings", "company_name")
+doc = frappe.get_doc("SSCC Settings", company_name)
 new_sscc = doc.generate_next_sscc()
 print(new_sscc)
 ```
@@ -137,3 +130,7 @@ print(new_sscc)
 - GS1: [Check Digit Calculator](https://www.gs1.org/services/check-digit-calculator)
     
 - GS1: [Company Prefix Registration](https://www.gs1.org/company-prefix)
+
+#### License
+
+mit
